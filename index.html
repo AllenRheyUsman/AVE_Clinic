@@ -14,6 +14,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Inter:wght@400;500;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <style>
+    .lodi{
+        position: absolute;
+        top: 200px;
+        left: 250px;
+        justify-content: center;
+        text-align: center;
+   
+    }
  
     footer{
         bottom: 0;
@@ -102,6 +110,14 @@
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Check Schedule</button>
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1" data-bs-whatever="@fat">Patient Information</button>
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-bs-whatever="@getbootstrap">Patients Assessment</button>
+            
+            
+                    <!-- test button modal -->
+
+            <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal3" data-bs-whatever="@getbootstrap">
+            </button> -->
+
+
 
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -231,6 +247,29 @@
                       </div>
                       </div>
                     </div>
+                    <!-- test -->
+                    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog lodi">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">You are now on the waitlist</h1>
+                               
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                               
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                               
+                            </div>
+                            </div>
+                          </div>
+                          </div>
+                          </div>
+                        </div>
+                    <!-- test end -->
                 </div>
                 </div>          
     </header>
@@ -260,13 +299,15 @@
           </div>
     </footer>
     <script>
-        // Add event listeners for the "Send message" buttons on the first and second modal cards
+    //   Add event listeners
         document.addEventListener('DOMContentLoaded', function() {
             const firstModalButton = document.querySelector('#exampleModal .btn.btn-primary');
             const secondModalButton = document.querySelector('#exampleModal1 .btn.btn-primary');
+            const thirdModalButton = document.querySelector('#exampleModal2 .btn.btn-primary');
             const exampleModal = new bootstrap.Modal(document.getElementById('exampleModal'));
             const exampleModal1 = new bootstrap.Modal(document.getElementById('exampleModal1'));
             const exampleModal2 = new bootstrap.Modal(document.getElementById('exampleModal2'));
+            const exampleModal3 = new bootstrap.Modal(document.getElementById('exampleModal3'));
     
             firstModalButton.addEventListener('click', function() {
                 exampleModal.hide();
@@ -276,6 +317,10 @@
             secondModalButton.addEventListener('click', function() {
                 exampleModal1.hide();
                 exampleModal2.show();
+            });
+            thirdModalButton.addEventListener('click', function() {
+                exampleModal2.hide();
+                exampleModal3.show();
             });
         });
     </script
